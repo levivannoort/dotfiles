@@ -7,7 +7,5 @@ set:
 
 tasks:
 	bootstrap:
-
 	sync:
-
 	clean:
