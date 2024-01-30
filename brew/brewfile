@@ -39,6 +39,7 @@ brew "docker-compose"
 brew "pre-commit"
 brew "watch"
 brew "grep"
+brew "go-task"
 
 cask "firefox"
 cask "obsidian"

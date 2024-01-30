@@ -1,0 +1,3 @@
+alias dotfiles="cd $HOME/dotfiles"
+alias personal="cd $HOME/personal"
+alias work="cd $HOME/work"
