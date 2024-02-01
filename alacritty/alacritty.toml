@@ -8,11 +8,11 @@ decorations = "buttonless"
 dynamic_padding = true
 
 [window.padding]
-x = 14
+x = 10
 y = 10
 
 [font]
-size = 25
+size = 12.5
 
 [font.bold]
 family = "SFMono Nerd Font"
@@ -29,4 +29,3 @@ style = "Italic"
 [font.normal]
 family = "SFMono Nerd Font"
 style = "Regular"
-
