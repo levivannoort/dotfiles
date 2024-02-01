@@ -40,6 +40,8 @@ brew "pre-commit"
 brew "watch"
 brew "grep"
 brew "go-task"
+brew "skhd"
+brew "lf"
 
 cask "firefox"
 cask "obsidian"
