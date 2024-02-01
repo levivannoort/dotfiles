@@ -1,0 +1,7 @@
+# https://github.com/gokcehan/lf
+
+set hidden
+set icons
+set number
+set relative number
+set shell zsh
