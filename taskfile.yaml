@@ -1,11 +1,5 @@
 version: 3
 
-set:
-  - errexit
-  - nounset
-  - pipefail
-
 tasks:
-	bootstrap:
-	sync:
-	clean:
+  sync:
+  clean:
