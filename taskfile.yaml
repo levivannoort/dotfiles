@@ -2,4 +2,6 @@ version: 3
 
 tasks:
   sync:
-  clean:
+    cmds:
+      - ln -sf /Users/levi/personal/dotfiles/zsh/zshrc ~/.zshrc
+      - source /Users/levi/.zshrc

@@ -42,6 +42,7 @@ brew "grep"
 brew "go-task"
 brew "skhd"
 brew "lf"
+brew "stow"
 
 cask "firefox"
 cask "obsidian"
