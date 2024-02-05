@@ -17,6 +17,6 @@ git clone https://github.com/levivannoort/dotfiles ~/.dotfiles
 ## installation
 
 ```shell
-stow --dir=~/.dotfiles --target=~/
+stow --dir /Users/levi/personal/dotfiles --target /Users/levi/ */
 ```
 

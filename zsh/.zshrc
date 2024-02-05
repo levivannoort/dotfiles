@@ -1,7 +1,7 @@
 # ------ exports ------
 export DOTFILES_LOCATION="${HOME}/personal/dotfiles"
 export XDG_CONFIG_HOME="${HOME}/.config"
-export EDITOR=nvim
+export EDITOR=code
 export BROSWER=firefox
 
 # ------ aliases: directories ------
