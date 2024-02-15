@@ -43,6 +43,7 @@ brew "go-task"
 brew "skhd"
 brew "lf"
 brew "stow"
+brew "alacritty"
 
 cask "firefox"
 cask "obsidian"

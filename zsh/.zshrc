@@ -9,11 +9,6 @@ alias dotfiles="cd $HOME/dotfiles"
 alias personal="cd $HOME/personal"
 alias work="cd $HOME/work"
 
-# ------ aliases: editor ------
-alias v="nvim"
-alias vim="nvim"
-alias nvim="nvim"
-
 # ------ aliases: git ------
 alias gs="git status"
 alias gb="git branch"
@@ -25,10 +20,13 @@ alias gpl="git pull"
 alias gps="git push"
 
 # ------ aliases: miscellaneous ------
-alias ll='ls -lFG'
+alias ll='ls -lsaFG'
 alias tp='terraform plan'
 
 # ------ tmux ------
-if [[ ! $(tmux list-sessions) ]]; then 
+if [[ ! $(tmux list-sessions) ]]; then
   tmux
 fi
+
+# ------ fzf ------
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

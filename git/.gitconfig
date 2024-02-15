@@ -1,16 +1,16 @@
 [user]
-	name = levi van noort
-	email = 73097785+levivannoort@users.noreply.github.com
+  name = levi van noort
+  email = 73097785+levivannoort@users.noreply.github.com
 
 [github]
-	user = levivannoort
+  user = levivannoort
 
 [core]
   excludesfile = ~/.gitignore
-  editor = nvim
+  editor = zed
 
 [init]
   defaultBranch = main
 
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
