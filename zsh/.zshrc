@@ -1,7 +1,7 @@
 # ------ exports ------
 export DOTFILES_LOCATION="${HOME}/personal/dotfiles"
 export XDG_CONFIG_HOME="${HOME}/.config"
-export EDITOR=code
+export EDITOR=zed
 export BROSWER=firefox
 
 # ------ aliases: directories ------
