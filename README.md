@@ -17,6 +17,5 @@ git clone https://github.com/levivannoort/dotfiles ~/.dotfiles
 ## installation
 
 ```shell
-stow --dir /Users/levi/personal/dotfiles --target /Users/levi/ */
+stow --dir /Users/levi/.dotfiles --target /Users/levi/ alacritty brew git k9s osx tmux zed zsh
 ```
-
