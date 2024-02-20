@@ -1,9 +1,9 @@
 [user]
-  name = levi van noort
+  name = Levi van Noort
   email = 73097785+levivannoort@users.noreply.github.com
 
-[github]
-  user = levivannoort
+[includeIf "gitdir:~/work/"]
+    path = ~/work/.gitconfig
 
 [core]
   excludesfile = ~/.gitignore
@@ -14,3 +14,6 @@
 
 [url "git@github.com:"]
   insteadOf = https://github.com/
+
+[url "git@gitlab.com:"]
+  insteadOf = https://gitlab.com/
