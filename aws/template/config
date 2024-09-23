@@ -1,0 +1,32 @@
+[default]
+region = eu-central-1
+output = json
+granted_color = purple
+
+[profile development]
+source_profile = default
+role_session_name = development
+role_arn = 
+region = eu-central-1
+granted_color = yellow
+
+[profile operations]
+source_profile = default
+role_session_name = operations
+role_arn = 
+granted_color = blue
+granted_icon = tree
+
+[profile production]
+source_profile = default
+role_session_name = production
+role_arn = 
+granted_color = red
+granted_icon = briefcase
+
+[profile staging]
+source_profile = default
+role_session_name = staging
+role_arn = 
+region = eu-central-1
+granted_color = orange
