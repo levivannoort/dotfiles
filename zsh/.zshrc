@@ -19,9 +19,14 @@ alias gco="git commit -m"
 alias gpl="git pull"
 alias gps="git push"
 
+# ------ aliases: kubernetes ------
+alias k='kubectl'
+
+# ------ aliases: kubernetes ------
+alias terraform='tofu'
+
 # ------ aliases: miscellaneous ------
 alias ll='ls -lsaFG'
-alias tp='terraform plan'
 
 # ------ tmux ------
 if [[ ! $(tmux list-sessions) ]]; then
