@@ -1,32 +1,40 @@
 [default]
-region = eu-central-1
-output = json
-granted_color = purple
+region            = eu-central-1
+output            = json
+granted_color     = black
+granted_icon      = circle
 
 [profile development]
-source_profile = default
+role_arn          = <role_arn>
+source_profile    = default
 role_session_name = development
-role_arn = 
-region = eu-central-1
-granted_color = yellow
+region            = eu-central-1
+granted_color     = yellow
+granted_icon      = fingerprint
 
 [profile operations]
-source_profile = default
+role_arn          = <role_arn>
+source_profile    = default
 role_session_name = operations
-role_arn = 
-granted_color = blue
-granted_icon = tree
+region            = eu-central-1
+granted_color     = blue
+granted_icon      = briefcase
 
 [profile production]
-source_profile = default
+role_arn          = <role_arn>
+source_profile    = default
 role_session_name = production
-role_arn = 
-granted_color = red
-granted_icon = briefcase
+region            = eu-central-1
+granted_color     = red
+granted_icon      = fingerprint
 
 [profile staging]
-source_profile = default
+role_arn          = <role_arn>
+source_profile    = default
 role_session_name = staging
-role_arn = 
-region = eu-central-1
-granted_color = orange
+region            = eu-central-1
+granted_color     = orange
+granted_icon      = fingerprint
+
+[profile default]
+credential_process = granted credential-process --profile=default
