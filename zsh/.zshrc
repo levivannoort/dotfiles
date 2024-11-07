@@ -1,8 +1,14 @@
-# ------ exports ------
+# ------ exports: generic ------
+export PROMPT="%n@%m %1~ %# "
 export DOTFILES_LOCATION="${HOME}/personal/dotfiles"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export EDITOR=vim
 export BROSWER=firefox
+
+# ------ exports: history ------
+export HISTSIZE=1048576
+export SAVEHIST=$HISTSIZE
+export HISTFILE="${HOME}/.history"
 
 # ------ aliases: directories ------
 alias dotfiles="cd $HOME/dotfiles"
@@ -22,11 +28,24 @@ alias gps="git push"
 # ------ aliases: kubernetes ------
 alias k='kubectl'
 
-# ------ aliases: kubernetes ------
-alias terraform='tofu'
+# ------ aliases: terraform/tofu ------
+alias tp='tofu plan'
+alias ta='tofu apply'
+alias tsw='tofu select workspace'
 
 # ------ aliases: miscellaneous ------
-alias ll='ls -lsaFG'
+# -l : long listing format (detailed info),  -s : show file size in blocks, -A : include hidden files
+# -F : classify file types (/ for dir, * for exec, @ for link, etc.), -G : colorize output based on file type
+alias ll='ls -lsAFG'
+
+# ------ options: history ------
+setopt extended_history 
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt share_history
+setopt inc_append_history
 
 # ------ tmux ------
 if [[ ! $(tmux list-sessions) ]]; then
