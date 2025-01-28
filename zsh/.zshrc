@@ -1,5 +1,4 @@
 # ------ exports: generic ------
-export PROMPT="%n@%m %1~ %# "
 export DOTFILES_LOCATION="${HOME}/personal/dotfiles"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export EDITOR=vim
