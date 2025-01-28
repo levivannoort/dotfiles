@@ -1,4 +1,3 @@
-
 [profile environment]
 granted_sso_start_url      = https://company.awsapps.com/start
 granted_sso_region         = eu-central-1
