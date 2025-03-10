@@ -4,6 +4,13 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export EDITOR=vim
 export BROSWER=firefox
 
+# ------ exports: miscellaneous ------
+
+# ------ exports: miscellaneous ------
+export AWS_DEFAULT_PROFILE="default"
+export AWS_SDK_LOAD_CONFIG=1
+export AWS_CONFIG_FILE="${HOME}/.aws/config"
+
 # ------ exports: history ------
 export HISTSIZE=1048576
 export SAVEHIST=$HISTSIZE

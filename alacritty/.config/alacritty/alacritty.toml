@@ -1,9 +1,8 @@
-
 [env]
 TERM = "xterm-256color"
 
 [window]
-decorations = "buttonless"
+decorations = "transparent"
 dynamic_padding = true
 
 [window.padding]
