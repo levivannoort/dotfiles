@@ -81,4 +81,4 @@ COLOR_GIT=$'%F{58}'
 
 setopt PROMPT_SUBST
 
-export PROMPT='%n@${(L)HOST%%.*} %(2~|../%2~|%~) ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}$ '
+export PROMPT='%n@${(L)HOST%%.*} %(2~|%2~|%~) ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}$ '
