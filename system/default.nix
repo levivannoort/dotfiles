@@ -2,6 +2,8 @@
 
 {
   system = {
+    primaryUser = username;
+
     defaults = {  
       NSGlobalDomain = {
         AppleInterfaceStyle = "Dark";
@@ -13,6 +15,15 @@
         show-recents = false;
         orientation = "bottom";
         tilesize = 48;
+
+        persistent-apps = [
+          "/Applications/Firefox.app"
+          "/Applications/Discord.app"
+          "/Applications/Obsidian.app"
+          "/Applications/Visual Studio Code.app"
+          "/Applications/Tableplus.app"
+          "/Applications/Spotify.app"
+        ];
       };
 
       finder = {

@@ -5,6 +5,8 @@ let
   username  = "levi";
   email     = "73097785+levivannoort@users.noreply.github.com";
 in {
+  stateVersion = "24.05";
+
   imports = [
     code-editor
     git
@@ -14,37 +16,43 @@ in {
     terminal-multiplexer
   ];
 
-  home.packages = [
-    pkgs.jq
-    pkgs.yq
-    pkgs.htop
-    pkgs.vagrant
-    pkgs.packer
-    pkgs.terraform
-    pkgs.opentofu
-    pkgs.tree
-    pkgs.bat
-    pkgs.fzf
-    pkgs.grep
-    pkgs.watch
-    pkgs.sqlite
-    pkgs.kustomize
-    pkgs.helm
-    pkgs.argocd
-    pkgs.kubent
-    pkgs.kubectx
-    pkgs.curl
-    pkgs.redis
-    pkgs.k9s
-    pkgs.k6
-    pkgs.awscli2
-    pkgs.granted
-    pkgs.slides
-    pkgs.goose
+  environment.systemPackages = with pkgs; [
+    jq
+    yq
+    htop
+    vagrant
+    packer
+    terraform
+    opentofu
+    tree
+    bat
+    fzf
+    grep
+    watch
+    sqlite
+    kustomize
+    helm
+    argocd
+    kubent
+    kubectx
+    curl
+    redis
+    k9s
+    k6
+    awscli2
+    granted
+    slides
+    goose
+    mtr
+    gh
+    iperf3
+    kubectl
+    qemu
+    libvirt
 
-    pkgs.go
-    pkgs.lua
-    pkgs.cue
+    go
+    lua
+    cue
   ];
 
   homebrew = {

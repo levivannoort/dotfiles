@@ -11,4 +11,5 @@ _:
   "slack"
   "docker"
   "docker-compose"
-]
+  "obs"
+];

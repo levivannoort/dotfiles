@@ -33,5 +33,5 @@
       set -g status-left ""
       set -g status-right ""
     '';
-  }
-};
+  };
+}
