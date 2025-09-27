@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
+      url = "github:nixos/nixpkgs/nixos-25.05";
     };
 
     home-manager = {
@@ -12,25 +12,16 @@
     };
 
     darwin = {
-      url = "github:lnl7/nix-darwin";
+      url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
-    darwinConfigurations = {
-      hostname = darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        modules = [
-          ./configuration.nix
-          home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.levi = import ./home.nix
-          }
-        ];
-      };
+    darwinConfigurations.m1 = {
+      system = "aarch64-darwin";
+      user   = "levi";
+      darwin = true;
     };
   };
 }

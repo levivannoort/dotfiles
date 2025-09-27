@@ -4,7 +4,17 @@ Used for storing configuration files on the workstation. These directories/files
 
 ## requirements
 
-`nix`
+`xcode`
+```bash
+xcode-select --install
 ```
-curl -L https://nixos.org/nix/install | sh
+
+`determinate systems: nix`
+```bash
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+```
+
+`nix-darwin`
+```bash
+nix run nix-darwin/nix-darwin-25.05#darwin-rebuild -- switch
 ```

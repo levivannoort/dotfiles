@@ -10,11 +10,10 @@
 
     histSize = 100000;
     histFile = "$HOME/.history";
-    setOptions = [
-      "hist_ignore_dups",
-      "share_history"
-    ];
-  }
+  };
 
-  programs.fzf.enableZshIntegration = true;
+  programs.fzf = {
+    keybindings = true;
+    fuzzyCompletion = true;
+  };
 }
