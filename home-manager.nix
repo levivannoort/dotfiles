@@ -11,9 +11,11 @@ in {
     code-editor
     git
     shell
+    ssh
     system
     terminal-emulator
     terminal-multiplexer
+    virtualisation
   ];
 
   environment.systemPackages = with pkgs; [
