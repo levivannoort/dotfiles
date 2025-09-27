@@ -5,7 +5,7 @@ let
   username  = "levi";
   email     = "73097785+levivannoort@users.noreply.github.com";
 in {
-  stateVersion = "24.05";
+  stateVersion = "25.05";
 
   imports = [
     code-editor
