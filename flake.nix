@@ -18,10 +18,16 @@
   };
 
   outputs = inputs@{ nixpkgs, home-manager, nix-darwin, ... }: {
-    darwinConfigurations.m1 = {
+    darwinConfigurations."sld" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
-      user   = "levi";
-      darwin = true;
+      modules = [
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.levi = import ./home-manager.nix;
+        }
+      ];
     };
   };
 }

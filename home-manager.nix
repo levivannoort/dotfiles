@@ -18,7 +18,7 @@ in {
     virtualisation
   ];
 
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [
     jq
     yq
     htop
