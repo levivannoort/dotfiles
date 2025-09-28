@@ -2,11 +2,12 @@ HOSTNAME ?= $(shell hostname)
 FLAKE ?= .#$(HOSTNAME)
 EXPERIMENTAL ?= --extra-experimental-features "nix-command flakes"
 
-.PHONY: help darwin-rebuild
+.PHONY: help install-nix install-nix-darwin darwin-rebuild
 
 help:
 	@echo "Available targets:"
-	@echo "  install-nix         - Install the nix package manager"
+	@echo "  install-nix         - Install the nix"
+	@echo "  install-nix-darwin  - Install nix-darwin"
 	@echo "  darwin-rebuild      - Rebuild the nix-darwin configuration"
 
 install-nix:

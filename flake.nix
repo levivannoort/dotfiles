@@ -18,9 +18,10 @@
   };
 
   outputs = inputs@{ nixpkgs, home-manager, nix-darwin, ... }: {
-    darwinConfigurations."sld" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."sld-2" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
+        ./darwin.nix
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

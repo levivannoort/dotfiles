@@ -7,17 +7,6 @@ let
 in {
   stateVersion = "25.05";
 
-  imports = [
-    code-editor
-    git
-    shell
-    ssh
-    system
-    terminal-emulator
-    terminal-multiplexer
-    virtualisation
-  ];
-
   home.packages = with pkgs; [
     jq
     yq
@@ -55,22 +44,7 @@ in {
     go
     lua
     cue
-  ];
-
-  homebrew = {
-    enable = true;
-    casks = pkgs.callPackage ./casks.nix {};
-    masApps = {
-      "magnet" = 441258766;
-      "wireguard" = 1451685025;
-    };
-  };
-
-  users.users.${username} = {
-    name = "${username}";
-    home = "/Users/${username}";
-    shell = pkgs.zsh;
-  };
+  ]
 
   home = {
     username = username;
