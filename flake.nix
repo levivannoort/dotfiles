@@ -1,9 +1,9 @@
 {
-  description = ".dotfiles github.com/levivannoort";
+  description = ".dotfiles  github.com/levivannoort";
 
   inputs = {
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-25.05";
+      url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
     home-manager = {
@@ -12,21 +12,26 @@
     };
 
     nix-darwin = {
-      url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
+      url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nix-darwin, ... }: {
-    darwinConfigurations."sld-2" = nix-darwin.lib.darwinSystem {
+  outputs = inputs@{ nixpkgs, home-manager, nix-darwin, ... }:
+  let
+    host = "sld";
+    user = "levi";
+  in {
+    darwinConfigurations."${host}" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
-        ./darwin.nix
+        ./hosts/${host}/darwin.nix
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.levi = import ./home-manager.nix;
+          home-manager.users.${user} = import "./home-manager/home-manager.nix";
+          users.users.${user}.home = "/Users/${user}";
         }
       ];
     };

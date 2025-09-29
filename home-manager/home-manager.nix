@@ -1,10 +1,7 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, ... }:
 
-let
-  name      = "Levi van Noort";
-  username  = "levi";
-  email     = "73097785+levivannoort@users.noreply.github.com";
-in {
+{
+  programs.home-manager.enable = true;
   stateVersion = "25.05";
 
   home.packages = with pkgs; [
@@ -45,12 +42,4 @@ in {
     lua
     cue
   ]
-
-  home = {
-    username = username;
-    homeDirectory = "/home/${username}";
-    stateVersion = "25.05";
-  };
-
-  programs.home-manager.enable = true;
 }
