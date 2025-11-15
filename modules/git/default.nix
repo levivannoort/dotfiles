@@ -2,11 +2,9 @@
   programs.git = {
     enable = true;
 
-    userName = name;
-    userEmail = email;
+    userName = "Levi van Noort";
+    userEmail = "73097785+levivannoort@users.noreply.github.com";
 
-    ignores = [
-      ".DS_Store"
-    ];
+    ignores = [];
   };
 }

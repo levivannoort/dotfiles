@@ -1,5 +1,5 @@
 {
-  description = ".dotfiles  github.com/levivannoort";
+  description = ".dotfiles github.com/levivannoort";
 
   inputs = {
     nixpkgs = {
@@ -19,20 +19,35 @@
 
   outputs = inputs@{ nixpkgs, home-manager, nix-darwin, ... }:
   let
-    host = "sld";
-    user = "levi";
+    systems = [
+      "x86_64-linux"
+      "aarch64-darwin"
+    ];
   in {
     darwinConfigurations = {
-      "${host}" = nix-darwin.lib.darwinSystem {
+      "lpws" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
-          ./hosts/${host}/darwin.nix
+          ./hosts/lpws/darwin.nix
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${user} = import "./home-manager/home-manager.nix";
-            users.users.${user}.home = "/Users/${user}";
+            home-manager.users.levi = import "./home-manager/home-manager.nix";
+            users.users.levi.home = "/Users/levi";
+          }
+        ];
+      };
+      "awps" = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        modules = [
+          ./hosts/awps/darwin.nix
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.levi = import "./home-manager/home-manager.nix";
+            users.users.levi.home = "/Users/levi";
           }
         ];
       };
