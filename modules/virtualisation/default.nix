@@ -5,5 +5,5 @@
       enable = true;
       dates = "weekly";
     };
-  }
-};
+  };
+}

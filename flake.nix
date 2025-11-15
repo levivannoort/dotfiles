@@ -33,7 +33,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.levi = import "./home-manager/home-manager.nix";
+            home-manager.users.levi = import "./hm/default.nix";
             users.users.levi.home = "/Users/levi";
           }
         ];
@@ -46,7 +46,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.levi = import "./home-manager/home-manager.nix";
+            home-manager.users.levi = import "./hm/default.nix";
             users.users.levi.home = "/Users/levi";
           }
         ];
