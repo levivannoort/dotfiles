@@ -1,0 +1,22 @@
+name: flake update
+
+on:
+  schedule:
+    - cron: "30 8 * * 6/2"
+  workflow_dispatch:
+
+jobs:
+  flake-update:
+    name: flake update
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
+
+      - name: install nix
+        uses: DeterminateSystems/nix-installer-action@main
+
+      - name: update flake update
+        uses: DeterminateSystems/update-flake-lock@v24
+        with:
+          pr-title: "chore: update flake.lock"

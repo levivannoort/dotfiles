@@ -1,0 +1,17 @@
+name: flake check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  flacke-check:
+    name: flake check
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
+
+      - name: check nix flake inputs
+        uses: DeterminateSystems/flake-checker-action@main
