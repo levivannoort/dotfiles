@@ -3,7 +3,8 @@ name: flake check
 on:
   pull_request:
   push:
-    branches: [main]
+    branches:
+      - "main"
 
 jobs:
   flacke-check:
