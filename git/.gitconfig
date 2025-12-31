@@ -1,0 +1,13 @@
+[user]
+  name = Levi van Noort
+  email = 73097785+levivannoort@users.noreply.github.com
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+
+[init]
+  defaultBranch = main
+
+[url "git@github.com:"]
+  insteadOf = https://github.com/

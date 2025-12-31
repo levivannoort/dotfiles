@@ -1,0 +1,14 @@
+[profile environment]
+granted_sso_start_url      = https://company.awsapps.com/start
+granted_sso_region         = eu-central-1
+granted_sso_account_id     = 000000000000
+granted_sso_role_name      = RoleName
+common_fate_generated_from = aws-sso
+credential_process         = granted credential-process --profile environment
+granted_color              = yellow
+granted_icon               = fingerprint
+
+[sso-session company]
+sso_start_url              = https://company.awsapps.com/start
+sso_region                 = eu-central-1
+sso_registration_scopes    = sso:account:access
