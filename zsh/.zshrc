@@ -17,8 +17,9 @@ export SAVEHIST=$HISTSIZE
 export HISTFILE="${HOME}/.history"
 
 # ------ aliases: directories ------
-alias dotfiles="cd $HOME/dotfiles"
+alias dotfiles="cd $HOME/.dotfiles"
 alias personal="cd $HOME/personal"
+alias source="cd $HOME/source"
 alias work="cd $HOME/work"
 
 # ------ aliases: git ------
