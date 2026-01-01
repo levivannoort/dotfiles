@@ -1,61 +1,57 @@
 foreground: &foreground "#ffffff"
 background: &background "default"
 backgroundOpaque: &backgroundOpaque "#333333"
-magenta: &magenta "#f72972"
+red: &red "#e0656b"
 orange: &orange "#e47c20"
-lightBlue: &lightBlue "#c3eff7"
-blue: &blue "#69d9ed"
-darkBlue: &darkBlue "#3174a2"
 green: &green "#a7e24c"
-purple: &purple "#856cc4"
 
 k9s:
   body:
     fgColor: *foreground
     bgColor: *background
-    logoColor: *magenta
+    logoColor: *red
   prompt:
-    fgColor: *foreground
+    fgColor: *green
     bgColor: *background
     suggestColor: *orange
   info:
-    fgColor: *blue
-    sectionColor: *lightBlue
+    fgColor: *foreground
+    sectionColor: *green
   dialog:
     fgColor: *foreground
     bgColor: *background
     buttonFgColor: *foreground
     buttonBgColor: *green
     buttonFocusFgColor: *foreground
-    buttonFocusBgColor: *darkBlue
-    labelFgColor: *orange
-    fieldFgColor: *blue
+    buttonFocusBgColor: *green
+    labelFgColor: *green
+    fieldFgColor: *green
   frame:
     border:
-      fgColor: *blue
-      focusColor: *darkBlue
+      fgColor: *green
+      focusColor: *green
     menu:
-      fgColor: *lightBlue
-      keyColor: *green
+      fgColor: *green
+      keyColor: *foreground
       numKeyColor: *green
     crumbs:
       fgColor: *foreground
       bgColor: *backgroundOpaque
-      activeColor: *blue
+      activeColor: *foreground
     status:
-      newColor: *blue
-      modifyColor: *purple
+      newColor: *green
+      modifyColor: *red
       addColor: *green
       pendingColor: *orange
-      errorColor: *magenta
-      highlightcolor: *blue
+      errorColor: *red
+      highlightcolor: *green
       killColor: *green
-      completedColor: *darkBlue
+      completedColor: *green
     title:
       fgColor: *foreground
       bgColor: *background
-      highlightColor: *blue
-      counterColor: *lightBlue
+      highlightColor: *green
+      counterColor: *foreground
       filterColor: *orange
   views:
     charts:
@@ -63,53 +59,53 @@ k9s:
       dialBgColor: *background
       chartBgColor: *backgroundOpaque
       defaultDialColors:
-        - *blue
-        - *magenta
+        - *green
+        - *red
       defaultChartColors:
-        - *blue
-        - *magenta
+        - *green
+        - *red
       resourceColors:
         batch/v1/jobs:
-          - *blue
-          - *magenta
+          - *green
+          - *red
         v1/persistentvolumes:
-          - *blue
-          - *magenta
+          - *green
+          - *red
         cpu:
-          - *blue
-          - *magenta
+          - *green
+          - *red
         mem:
-          - *blue
-          - *magenta
+          - *green
+          - *red
         v1/events:
-          - *blue
-          - *magenta
+          - *green
+          - *red
         v1/pods:
-          - *blue
-          - *magenta
+          - *green
+          - *red
     table:
       fgColor: *foreground
       bgColor: *background
-      cursorFgColor: *foreground
-      cursorBgColor: *backgroundOpaque
-      markColor: *magenta
+      cursorFgColor: *backgroundOpaque
+      cursorBgColor: *green
+      markColor: *red
       header:
         fgColor: *foreground
         bgColor: *backgroundOpaque
-        sorterColor: *blue
+        sorterColor: *green
     xray:
       fgColor: *foreground
       bgColor: *background
-      cursorColor: *blue
+      cursorColor: *green
       cursorTextColor: *foreground
-      graphicColor: *blue
+      graphicColor: *green
     yaml:
       keyColor: *orange
       colonColor: *orange
       valueColor: *foreground
     logs:
       fgColor: *foreground
-      bgColor: *backgroundOpaque
+      bgColor: *background
       indicator:
         fgColor: *foreground
-        bgColor: *darkBlue
+        bgColor: *background

@@ -3,6 +3,7 @@ k9s:
   refreshRate: 2
   maxConnRetry: 5
   ui:
+    skin: default
     enableMouse: false
     headless: false
     logoless: true
@@ -12,7 +13,7 @@ k9s:
     noIcons: true
     skipLatestRevCheck: true
   logger:
-    tail: 100
+    tail: 200
     buffer: 5000
     sinceSeconds: 300
     fullScreenLogs: false
