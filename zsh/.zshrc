@@ -19,7 +19,6 @@ export HISTFILE="${HOME}/.history"
 # ------ aliases: directories ------
 alias dotfiles="cd $HOME/.dotfiles"
 alias personal="cd $HOME/personal"
-alias source="cd $HOME/source"
 alias work="cd $HOME/work"
 
 # ------ aliases: git ------
@@ -36,6 +35,7 @@ alias gps="git push"
 alias k='kubectl'
 
 # ------ aliases: terraform/tofu ------
+alias tf='terraform'
 alias tp='terraform plan'
 alias ta='terraform apply'
 alias tsw='terraform select workspace'
