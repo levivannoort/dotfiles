@@ -1,7 +1,6 @@
 # generic
 bin
 
-# zed
-zed/.config/zed/conversations/*
-zed/.config/zed/embeddings/*
-zed/.config/zed/.*
+# zsh
+zsh/scripts/digital-ocean/contexts.txt
+
