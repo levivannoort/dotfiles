@@ -1,13 +1,15 @@
 command = /opt/homebrew/bin/tmux
-background-opacity = 0.97
+background-opacity = 0.95
+background-blur=16
 window-padding-x = 20
 window-padding-y = 10
 background = #151515
 foreground = #ECECEC
-selection-invert-fg-bg = true
+selection-background = #3B663B
+selection-foreground = #ECECEC
 cursor-color = #dedede
 cursor-text = #2f2b2c
-cursor-style = block_hollow
+cursor-style = bar
 cursor-style-blink = true
 palette = 0=#302c2c
 palette = 1=#5a5a5a
@@ -34,5 +36,6 @@ font-style-bold-italic = Bold Italic
 window-decoration = true
 macos-titlebar-style = hidden
 macos-icon = custom-style
-macos-icon-ghost-color = #232F99
-macos-icon-screen-color = #C4C179
+macos-icon-frame = plastic
+macos-icon-ghost-color = #15239C
+macos-icon-screen-color = #C9C7A2
