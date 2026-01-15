@@ -21,5 +21,5 @@ brew bundle --file=brew/.config/brew/Brewfile
 ```
 
 ```shell
-stow --dir /Users/levi/.dotfiles --target /Users/levi/ alacritty brew git k9s osx tmux zsh fzf
+stow --dir /Users/levi/.dotfiles --target /Users/levi/ brew git k9s osx tmux zsh fzf ghostty
 ```
