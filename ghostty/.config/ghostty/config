@@ -1,12 +1,9 @@
 command = /opt/homebrew/bin/tmux
-term = xterm-256color
-window-decoration = none
+background-opacity = 0.97
 window-padding-x = 20
 window-padding-y = 10
-background = #2f2b2c
-foreground = #dedede
-selection-background = #dedede
-selection-foreground = #2f2b2c
+background = #151515
+foreground = #ECECEC
 selection-invert-fg-bg = true
 cursor-color = #dedede
 cursor-text = #2f2b2c
