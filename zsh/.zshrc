@@ -62,11 +62,6 @@ fi
 # ------ fzf ------
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# ------ nvm ------
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
 # ------ prompt customization ------
 function parse_git_branch() {
     local branch
@@ -76,10 +71,5 @@ function parse_git_branch() {
     fi
 }
 
-
-COLOR_DEF=$'%f'
-COLOR_GIT=$'%F{58}'
-
 setopt PROMPT_SUBST
-
-export PROMPT='%n@${(L)HOST%%.*} %(2~|%2~|%~) ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}$ '
+export PROMPT='%n@${(L)HOST%%.*} %(2~|%2~|%~) $(parse_git_branch)$ '
