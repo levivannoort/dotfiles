@@ -41,8 +41,11 @@ alias ta='terraform apply'
 alias tsw='terraform select workspace'
 
 # ------ aliases: miscellaneous ------
-# -l : long listing format (detailed info),  -s : show file size in blocks, -A : include hidden files
-# -F : classify file types (/ for dir, * for exec, @ for link, etc.), -G : colorize output based on file type
+# -l : long listing format (detailed info),
+# -s : show file size in blocks,
+# -A : include hidden files,
+# -F : classify file types (/ for dir, * for exec, @ for link, etc.),
+# -G : colorize output based on file type
 alias ll='ls -lsAFG'
 
 # ------ options: history ------
@@ -63,13 +66,17 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ------ prompt customization ------
-function parse_git_branch() {
-    local branch
-    branch=$(git symbolic-ref --short HEAD 2>/dev/null)
-    if [[ -n "$branch" ]]; then
-      echo "$branch "
-    fi
+setopt PROMPT_SUBST
+
+local user_color="%F{2}"         # palette 2 = #729464 (green - matches selection)
+local host_color="%F{3}"         # palette 3 = #cacaca (bright gray)
+local path_color="%F{2}"         # palette 2 = #729464 (green - matches selection)
+local git_color="%F{3}"          # palette 3 = #cacaca (bright gray)
+local prompt_symbol="%F{7}"      # palette 7 = #dedede (cursor color)
+local reset="%f"
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/\1 /p'
 }
 
-setopt PROMPT_SUBST
-export PROMPT='%n@${(L)HOST%%.*} %(2~|%2~|%~) $(parse_git_branch)$ '
+export PROMPT="${user_color}%n${reset}@${host_color}\${(L)HOST%%.*}${reset} ${path_color}%(2~|%2~|%~)${reset} ${git_color}\$(parse_git_branch)${prompt_symbol}\$${reset} "
