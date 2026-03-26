@@ -2,7 +2,7 @@
 
 usage() {
     echo "Usage: $0 [-f file] [-n name1,name2,name3]"
-    echo "  -f file    : Read cluster names from a file (one per line)"
+    echo "  -f file     : Read cluster names from a file (one per line)"
     echo "  -n names   : Comma-separated list of cluster names"
     echo "  -h         : Display this help message"
     exit 1
