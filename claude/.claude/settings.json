@@ -21,5 +21,6 @@
     "defaultMode": "auto"
   },
   "effortLevel": "medium",
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "theme": "dark-daltonized"
 }
