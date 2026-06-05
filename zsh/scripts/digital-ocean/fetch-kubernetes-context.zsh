@@ -10,10 +10,10 @@ usage() {
 
 declare -A namespace_map=(
     ["cloud-"]="cloud"
+    ["databases-"]="databases"
     ["edge-"]="edge"
     ["dns-"]="dns"
     ["assets-"]="website"
-    ["imagine-"]="imagine"
 )
 
 get_namespace() {
