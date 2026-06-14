@@ -2,7 +2,8 @@
 export DOTFILES_LOCATION="${HOME}/personal/dotfiles"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export EDITOR=vim
-export BROSWER=firefox
+export BROWSER=firefox
+export PATH="$HOME/go/bin:$PATH"
 
 # ------ exports: miscellaneous ------
 
@@ -80,3 +81,6 @@ parse_git_branch() {
 }
 
 export PROMPT="${user_color}%n${reset}@${host_color}\${(L)HOST%%.*}${reset} ${path_color}%(2~|%2~|%~)${reset} ${git_color}\$(parse_git_branch)${prompt_symbol}\$${reset} "
+
+# Go-installed binaries (lekture, etc.)
+export PATH="$HOME/go/bin:$PATH"
