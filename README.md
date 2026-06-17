@@ -23,3 +23,11 @@ brew bundle --file=brew/.config/brew/Brewfile
 ```shell
 stow --dir /Users/levi/.dotfiles --target /Users/levi/ brew git k9s osx tmux zsh fzf ghostty
 ```
+
+## password store
+
+The `pass` store at `~/.password-store` is backed by its own private git remote (not stowed — it holds encrypted secrets). Restore it on a new machine after importing the gpg secret key:
+
+```shell
+git clone git@github.com:levivannoort/pass.git ~/.password-store
+```
