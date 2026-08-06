@@ -20,5 +20,8 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 # show Path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
 
+# calculate all file sizes in Finder list view
+defaults write com.apple.finder FK_StandardViewSettings -dict-add ListViewSettings '{ "calculateAllSizes" = 1; }'
+
 # don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
