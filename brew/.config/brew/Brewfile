@@ -51,6 +51,7 @@ brew "kubeconform"
 brew "cue"
 brew "chart-testing"
 brew "act"
+brew "uv"
 
 cask "firefox"
 cask "obsidian"
