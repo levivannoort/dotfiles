@@ -4,3 +4,5 @@ bin
 # zsh
 zsh/scripts/digital-ocean/contexts.txt
 
+# macOS
+.DS_Store
