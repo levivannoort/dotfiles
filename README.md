@@ -21,7 +21,7 @@ brew bundle --file=brew/.config/brew/Brewfile
 ```
 
 ```shell
-stow --dir /Users/levi/.dotfiles --target /Users/levi/ brew git k9s osx tmux zsh fzf ghostty
+stow --dir /Users/levi/.dotfiles --target /Users/levi/ brew git k9s osx tmux zsh fzf ghostty claude
 ```
 
 ## password store
