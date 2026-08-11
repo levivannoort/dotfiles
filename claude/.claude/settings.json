@@ -20,6 +20,11 @@
     ],
     "defaultMode": "auto"
   },
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
   "effortLevel": "medium",
   "skipAutoPermissionPrompt": true,
   "theme": "dark-daltonized"
