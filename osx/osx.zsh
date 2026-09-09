@@ -25,3 +25,6 @@ defaults write com.apple.finder FK_StandardViewSettings -dict-add ListViewSettin
 
 # don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
+
+# trackpad tracking speed (slider max is 3.0; higher values work)
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 3.0
