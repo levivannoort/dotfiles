@@ -1,6 +1,9 @@
 # generic
 bin
 
+# claude
+.claude
+
 # zsh
 zsh/scripts/digital-ocean/contexts.txt
 
