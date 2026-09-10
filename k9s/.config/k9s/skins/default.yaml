@@ -4,6 +4,7 @@ backgroundOpaque: &backgroundOpaque "#333333"
 red: &red "#e0656b"
 orange: &orange "#e47c20"
 green: &green "#a7e24c"
+greenMuted: &greenMuted "#4f6b28"
 
 k9s:
   body:
@@ -37,7 +38,7 @@ k9s:
     crumbs:
       fgColor: *foreground
       bgColor: *backgroundOpaque
-      activeColor: *foreground
+      activeColor: *greenMuted
     status:
       newColor: *green
       modifyColor: *red
@@ -93,6 +94,7 @@ k9s:
         fgColor: *foreground
         bgColor: *backgroundOpaque
         sorterColor: *green
+        selectedSortColumnColor: *foreground
     xray:
       fgColor: *foreground
       bgColor: *background
