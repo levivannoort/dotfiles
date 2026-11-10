@@ -11,3 +11,61 @@
 
 [url "git@github.com:"]
   insteadOf = https://github.com/
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+  autoSetupRemote = true
+  followTags = true
+
+[fetch]
+  prune = true
+  pruneTags = true
+
+[rebase]
+  autoStash = true
+  autoSquash = true
+
+[merge]
+  conflictstyle = zdiff3
+
+[diff]
+  algorithm = histogram
+  colorMoved = zebra
+  mnemonicPrefix = true
+  renames = true
+
+[rerere]
+  enabled = true
+  autoupdate = true
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = -version:refname
+
+[column]
+  ui = auto
+
+[help]
+  autocorrect = prompt
+
+[alias]
+  # these used to live in .zshrc; as git aliases they work from any shell,
+  # from scripts, and get tab completion for free.
+  s = status
+  b = branch
+  d = diff
+  ch = checkout
+  aa = add --all
+  co = commit -m
+  pl = pull
+  ps = push
+  # extras
+  last = log -1 HEAD --stat
+  lg = log --oneline --graph --decorate --all
+  unstage = restore --staged
+  amend = commit --amend --no-edit

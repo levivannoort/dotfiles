@@ -1,0 +1,10 @@
+# This package ships a file literally named .gitignore (it is git's global
+# core.excludesfile). Stow's *built-in* ignore list contains `\.gitignore`, so
+# without this file ~/.gitignore is silently never linked and core.excludesfile
+# points at nothing. Defining any .stow-local-ignore replaces that built-in
+# list, so the safe defaults are restored here — minus .gitignore.
+\.git
+\.stow-local-ignore
+CVS
+.+~
+\#.*\#

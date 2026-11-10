@@ -1,0 +1,78 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zsh stow vim-nox
+          pipx install yamllint
+
+      - name: shell syntax
+        run: make lint-shell
+
+      - name: yaml lint
+        run: make lint-yaml
+
+      - name: vimrc loads without errors
+        run: make lint-vim
+
+      - name: shellcheck
+        run: shellcheck scripts/*.sh
+
+  stow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install stow
+        run: sudo apt-get update && sudo apt-get install -y stow
+
+      # Stow into a scratch target so the runner's own dotfiles cannot mask a
+      # real conflict, then assert the symlinks actually landed.
+      - name: stow into a clean target
+        run: |
+          target="$(mktemp -d)"
+          make stow TARGET="$target"
+          test -L "$target/.zshrc"
+          test -L "$target/.gitconfig"
+          test -L "$target/.tmux.conf"
+          test -L "$target/.vimrc"
+          test -L "$target/.local/bin/do-fetch-kubernetes-context"
+          test -L "$target/.config/ghostty/config"
+          # claude must be a real directory with per-file symlinks, never a
+          # folded directory symlink into the repo.
+          test -d "$target/.claude" && test ! -L "$target/.claude"
+          test -L "$target/.claude/settings.json"
+          make unstow TARGET="$target"
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Guards against the failure mode this repo is structurally exposed to:
+      # Claude Code runtime state being committed from the stow package.
+      - name: no claude runtime state committed
+        run: |
+          offenders="$(git ls-files 'claude/.claude' \
+            | grep -Ev '^claude/\.claude/(settings\.json|CLAUDE\.md|commands/|agents/)' || true)"
+          if [ -n "$offenders" ]; then
+            echo "runtime state is tracked:" >&2
+            echo "$offenders" >&2
+            exit 1
+          fi
+          echo "only claude config is tracked"

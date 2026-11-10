@@ -1,1 +1,18 @@
+# global excludes (core.excludesfile) — keep this minimal and machine-scoped.
+# Project-specific ignores belong in the project's own .gitignore.
+
+# macOS
 .DS_Store
+.AppleDouble
+._*
+
+# editors / IDEs
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# tooling
+.direnv/
+.envrc.local

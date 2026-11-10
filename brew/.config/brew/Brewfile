@@ -1,58 +1,86 @@
+# ------ shell / terminal ------
+brew "bash"
+brew "bash-completion"
+brew "tmux"
+brew "stow"
+brew "vim"
+
+# ------ search / files ------
 brew "fzf"
-brew "awscli"
-brew "gh"
-brew "git"
-brew "k6"
-brew "jq"
-brew "yq"
+brew "fd"
+brew "ripgrep"
+brew "grep"
 brew "bat"
-brew "redis"
-brew "k9s"
+brew "lf"
 brew "wget"
 brew "curl"
 brew "watch"
-brew "hugo"
-brew "vim"
-brew "tmux"
-brew "bash"
-brew "bash-completion"
-brew "helm"
-brew "kustomize"
-brew "terraform"
+brew "telnet"
+
+# ------ data / serialisation ------
+brew "jq"
+brew "yq"
+brew "cue"
+brew "ytt"
 brew "sqlite"
+brew "redis"
+
+# ------ git / ci ------
+brew "git"
+brew "gh"
+brew "pre-commit"
+brew "act"
+
+# ------ kubernetes ------
 brew "kubernetes-cli"
 brew "kubectx"
 brew "kubent"
+brew "kubeconform"
+brew "k9s"
+brew "helm"
+brew "kustomize"
 brew "argocd"
-brew "telnet"
-brew "texlive"
-brew "lua"
-brew "go"
-brew "earthly"
+brew "chart-testing"
+
+# ------ infrastructure / cloud ------
+brew "terraform"
+brew "awscli"
+brew "granted"     # credential_process backend used by aws/template/config
+brew "doctl"
+
+# ------ containers / build ------
 brew "docker"
 brew "docker-compose"
-brew "pre-commit"
-brew "watch"
-brew "grep"
-brew "lf"
-brew "stow"
-brew "slides"
-brew "goose"
 brew "buildkit"
-brew "doctl"
-brew "opencode"
-brew "pi-coding-agent"
-brew "fd"
-brew "ripgrep"
-brew "ytt"
-brew "yamllint"
-brew "pass"
-brew "kubeconform"
-brew "cue"
-brew "chart-testing"
-brew "act"
+brew "earthly"
+
+# ------ languages / runtimes ------
+brew "go"
+brew "lua"
 brew "uv"
 
+# ------ linting ------
+brew "yamllint"
+brew "shellcheck"
+
+# ------ testing / load ------
+brew "k6"
+
+# ------ agents ------
+brew "goose"
+brew "opencode"
+brew "pi-coding-agent"
+
+# ------ docs / publishing ------
+brew "hugo"
+brew "slides"
+brew "texlive"
+brew "pass"
+
+# ------ casks ------
+cask "ghostty"
+cask "visual-studio-code"
+cask "claude-code"
 cask "firefox"
 cask "obsidian"
 cask "tableplus"
@@ -62,6 +90,3 @@ cask "whatsapp"
 cask "spotify"
 cask "basictex"
 cask "vagrant"
-cask "ghostty"
-cask "visual-studio-code"
-cask "claude-code"

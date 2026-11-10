@@ -1,0 +1,33 @@
+# stow ignores these when linking the `claude` package.
+#
+# Until `make migrate-claude` has run, Claude's runtime state still sits inside
+# this package on disk. .gitignore keeps it out of git; this file keeps it out
+# of the symlink farm. Patterns are regexes matched per path segment.
+
+# stow defaults, restored because this file replaces the built-in list
+\.git
+\.gitignore
+\.stow-local-ignore
+CVS
+.+~
+\#.*\#
+
+# claude runtime state — never link these
+projects
+sessions
+session-env
+shell-snapshots
+file-history
+backups
+cache
+plugins
+telemetry
+plans
+todos
+statsig
+ide
+history\.jsonl
+policy-limits\.json
+remote-settings\.json
+\.last-cleanup
+.*\.log
